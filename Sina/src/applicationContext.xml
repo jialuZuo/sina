@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans
-	xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-						http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
-						http://www.springframework.org/schema/context   
-      					http://www.springframework.org/schema/context/spring-context-4.1.xsd   
-     				 	http://www.springframework.org/schema/aop   
-      					http://www.springframework.org/schema/aop/spring-aop-4.1.xsd   
-      					http://www.springframework.org/schema/tx   
-      					http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans    
+      http://www.springframework.org/schema/beans/spring-beans-2.5.xsd   
+      http://www.springframework.org/schema/context   
+      http://www.springframework.org/schema/context/spring-context-2.5.xsd   
+      http://www.springframework.org/schema/aop   
+      http://www.springframework.org/schema/aop/spring-aop-2.5.xsd   
+      http://www.springframework.org/schema/tx   
+      http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
 
 	<!-- 用注解方法注入bean 上边schemaLocation的三条语句顺序很重要，否则报错 -->
@@ -36,7 +37,7 @@
         <!-- 配置实体描述文件 -->
         <property name="mappingResources">
             <list>
-                <value>com/model/User.hbm.xml</value>
+                <value>com/entity/User.hbm.xml</value>
             </list>
         </property>
         <!--扫描com.cuangwu包下以及子包种有 @Service @Controller @Repository @Component  注解的类,一旦发现,则将其纳入到spring容器中管理 

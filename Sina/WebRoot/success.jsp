@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <form action="add.action" method="get">
         UserName:<input type="text" name="user.username"><br />
         UserPassword:<input type="password" name="user.userpassword"><br />
-        
+        UserMessage:<input type="text" name="user.usermessage"><br />
         <input type="submit" value="提交"> <input type="reset"
             value="重置">
     </form>
@@ -48,7 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <tr>
                     <td>${user.id}</td>
                     <td>${user.username}</td>
-                    
+                    <td>${user.usermessage}</td>
                     <td><a href="edit.action?param=0&id=${user.id}">编辑</a> <a
                         href="delete.action?id=${user.id}">删除</a></td>
                 </tr>

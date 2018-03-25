@@ -7,7 +7,7 @@ import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import com.model.User;
+import com.entity.User;
 import com.opensymphony.xwork2.ActionSupport;
 import com.service.UserService;
 
@@ -42,7 +42,7 @@ public class UserAction extends ActionSupport{
     }
 
     public String addUser(){
-        if(userService.exits(user.getUsername())){
+        if(userService.exits(user.getUserName())){
             return ERROR;
         }
         userService.save(user);

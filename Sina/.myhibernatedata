@@ -1,5 +1,5 @@
 #MyEclipse Hibernate Properties
-#Sun Mar 25 23:55:08 CST 2018
+#Mon Mar 26 00:46:28 CST 2018
 genBasicCompId=true
 sessionFactoryName=com.util.HibernateSessionFactory
 profile=
@@ -14,7 +14,7 @@ keyGenerator=assigned
 genVersionTag=false
 sessionFactoryId=
 basePersistenceClass=
-genAnnotations=true
+genAnnotations=false
 reSettingsFile=/Sina/hibernate.reveng.xml
 configFile=/Sina/src/hibernate.cfg.xml
 createConfigFile=true
