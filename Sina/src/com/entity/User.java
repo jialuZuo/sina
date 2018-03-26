@@ -28,16 +28,14 @@ public class User implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public User(Integer userId, String userName, String password) {
-		this.userId = userId;
+	public User(String userName, String password) {
 		this.userName = userName;
 		this.password = password;
 	}
 
 	/** full constructor */
-	public User(Integer userId, String userName, String userPicture, String password, String sex, String userPhone,
+	public User(String userName, String userPicture, String password, String sex, String userPhone,
 			String userBlogAddress, Date userBirth, String userInfo, String bkImage) {
-		this.userId = userId;
 		this.userName = userName;
 		this.userPicture = userPicture;
 		this.password = password;

@@ -21,8 +21,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
     添加user，如果姓名没有冲突，那么就添加到数据库，如果姓名冲突了就不能添加，返回失败页面
     <form action="add.action" method="get">
-        UserName:<input type="text" name="user.username"><br />
-        UserPassword:<input type="password" name="user.userpassword"><br />
+        UserName:<input type="text" name="user.userName"><br />
+        UserPassword:<input type="password" name="user.password"><br />
         
         <input type="submit" value="提交"> <input type="reset"
             value="重置">
@@ -46,10 +46,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <tbody>
             <c:forEach var="user" items="${users }">
                 <tr>
-                    <td>${user.id}</td>
-                    <td>${user.username}</td>
+                    <td>${user.userId}</td>
+                    <td>${user.userName}</td>
                     
-                    <td><a href="edit.action?param=0&id=${user.id}">编辑</a> <a
+                    <td><a href="edit.action?param=0&id=${user.userId}">编辑</a> <a
                         href="delete.action?id=${user.id}">删除</a></td>
                 </tr>
             </c:forEach>

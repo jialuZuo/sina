@@ -33,12 +33,15 @@ public class UserDao {
         return (User)this.hibernateTemplate.load(User.class,id);
     }
     public List<User> findByUsername(String username){
-        return (List<User>) hibernateTemplate.find("from User u where u.userName = ?",username);
+        List<User> find = (List<User>) hibernateTemplate.find("from User u where u.userName = ?",username);
+		return find;
     }
     public List<User> queryByUsername(String username){
-        return (List<User>) hibernateTemplate.find("from User u where u.userName like ?","%"+username+"%");
+        List<User> find = (List<User>) hibernateTemplate.find("from User u where u.userName like ?","%"+username+"%");
+		return find;
     }
     public List<User> findAllUsers(){
-         return (List<User>) this.getHibernateTemplate().find("from User order by userId");  
+         List<User> find = (List<User>) this.getHibernateTemplate().find("from User order by userId");
+		return find;  
     }
 }

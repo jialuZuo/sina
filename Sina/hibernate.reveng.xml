@@ -4,7 +4,7 @@
 <hibernate-reverse-engineering>
 <table name="user" catalog="sina">
 	<primary-key>
-		<generator class="assigned"></generator>
+		<generator class="increment"></generator>
 	</primary-key>
 </table>
 </hibernate-reverse-engineering>

@@ -21,9 +21,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
       编辑User
     <form action="edit.action" method="get">
-    ID:<input type="text" name="user.id" value="${user.id}" readonly="readonly"><br/>
-    UserName:<input type="text" name="user.username" value="${user.username}"><br/>
-    UserPassword:<input type="password" name="user.userpassword" value="${user.userpassword}"><br/>
+    ID:<input type="text" name="user.id" value="${user.userId}" readonly="readonly"><br/>
+    UserName:<input type="text" name="user.username" value="${user.userName}"><br/>
+    UserPassword:<input type="password" name="user.userpassword" value="${user.password}"><br/>
     UserMessage:<input type="text" name="user.usermessage" value="${user.usermessage}"><br/>
     <input type="hidden" name="param" value="1"/>
     <input type="submit" value="提交">
